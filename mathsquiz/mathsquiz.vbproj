@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{92AA07FA-0AA9-483D-9FFB-73F991F1FB44}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>mathsquiz.My.MyApplication</StartupObject>
+    <StartupObject>mathsquiz.Form1</StartupObject>
     <RootNamespace>mathsquiz</RootNamespace>
     <AssemblyName>mathsquiz</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -24,6 +24,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>mathsquiz.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -84,6 +86,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.timeLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.plusLeftLabel = New System.Windows.Forms.Label()
@@ -45,6 +46,7 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.dividedLeftLabel = New System.Windows.Forms.Label()
         Me.startButton = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         CType(Me.sum, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.difference, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.product, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -274,11 +276,21 @@ Partial Class Form1
         Me.startButton.Text = "Start the Quiz"
         Me.startButton.UseVisualStyleBackColor = True
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Enabled = False
+        Me.DateTimePicker1.Location = New System.Drawing.Point(12, 9)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(190, 20)
+        Me.DateTimePicker1.TabIndex = 21
+        Me.DateTimePicker1.Value = New Date(2023, 9, 22, 0, 0, 0, 0)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(769, 437)
+        Me.ClientSize = New System.Drawing.Size(773, 462)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.startButton)
         Me.Controls.Add(Me.quotient)
         Me.Controls.Add(Me.Label10)
@@ -303,6 +315,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.timeLabel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Nnachi Joseph Otu + Maths Quiz"
@@ -338,4 +351,5 @@ Partial Class Form1
     Friend WithEvents Label12 As Label
     Friend WithEvents dividedLeftLabel As Label
     Friend WithEvents startButton As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
